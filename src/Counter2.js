@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 
 import Counter from './Counter';
+
 class Counter2 extends Component
 {
-  	render() {
+    render() {
 
-  		const { title } = this.props;
-  		
-  		return (
-	    	<div className="">
-	         
+      const { title } = this.props;
+      
+      return (
+        <div className="">
+          
 
-	         <Counter/>
-	        </div>
+           <p> Counter: 2 </p> 
+
+           <Counter/>
+           
+          </div>
         );
 
     }

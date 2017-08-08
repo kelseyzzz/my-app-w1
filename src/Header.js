@@ -8,7 +8,6 @@ class Header extends Component
 {
   	render() {
 
-  		const { title } = this.props;
   		
   		return (
           <BrowserRouter>
@@ -16,7 +15,7 @@ class Header extends Component
 
                 <nav>
        
-                    <NavLink exact={true} to="/" activeStyle={{ color: 'orange' }}>Home</NavLink>
+                    <NavLink exact to="/" activeStyle={{ color: 'orange' }}>Home</NavLink>
                     
                     <NavLink to="/about" activeStyle={{ color: 'green' }}>Counter 1</NavLink>
 

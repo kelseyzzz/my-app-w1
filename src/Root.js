@@ -8,7 +8,6 @@ class Root extends Component
 {
   	render() {
 
-  		const { title } = this.props;
   		
   		return (
 	    	<div className="">
