@@ -27,9 +27,13 @@ class Counter extends Component
 
     decrement() {
       console.log('decrement()', this);
+      let newCount = this.state.counter -1;
+      if (newCount < 0) {
+        newCount = 0;
+      }
       this.setState({
-        counter: this.state.counter - 1,
-      })
+        counter: newCount
+      });
     }
 
     reset () {

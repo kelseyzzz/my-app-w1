@@ -10,7 +10,7 @@ class Header extends Component
 
   		
   		return (
-          <BrowserRouter>
+         
     	    	<div className="App-header">
 
                 <nav>
@@ -20,11 +20,13 @@ class Header extends Component
                     <NavLink to="/about" activeStyle={{ color: 'green' }}>Counter 1</NavLink>
 
                     <NavLink to="/counter2" activeStyle={{ color: 'blue' }}>Counter 2</NavLink>
+
+                    <NavLink to="/counter-form" activeStyle={{ color: 'blue' }}>Counter Form</NavLink>
          
                 </nav>
 
     	        </div>
-            </BrowserRouter>
+            
         );
 
     }
