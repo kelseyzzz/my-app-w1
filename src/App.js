@@ -8,7 +8,7 @@ import Header from './Header';
 import Root from './Root';
 import About from './About';
 import Counter2 from './Counter2';
-import CounterForm from './counter-form';
+import CounterForm from './CounterForm';
 import NotFound404 from './NotFound404';
 
 
@@ -38,7 +38,7 @@ class App extends Component
             <Route exact path="/" component={Root} />
             <Route path="/about" component={About} />
             <Route path="/counter2" component={Counter2} />
-            <Route path="/counter-form" component={CounterForm} />
+            <Route path="/CounterForm" component={CounterForm} />
             <Route component={NotFound404} />
           </Switch>
 

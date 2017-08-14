@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import PropTypes from "prop-types";
 class Counter extends Component
 
 {
@@ -18,6 +18,24 @@ class Counter extends Component
       
     }
 
+      componentWillReceiveProps(nextProps) {
+        console.log("Counter.componentWillReceiveProps", nextProps);
+
+        let startingVal = nextProps.initialValue;
+        if (!startingVal) {
+          startingVal = 0;
+        }
+        this.setState({counter: startingVal});
+      }
+
+      shouldComponentUpdate(nextProps, nextState) {
+        console.log("Counter.shouldComponentUpdate", nextProps, nextState);
+        return true;
+      }
+
+
+
+
     increment() {
       console.log('increment()', this);
       this.setState({
@@ -35,6 +53,10 @@ class Counter extends Component
         counter: newCount
       });
     }
+
+
+
+
 
     reset () {
       console.log('reset()', this);
@@ -58,6 +80,18 @@ class Counter extends Component
 
     }
 }
+
+
+      Counter.propTypes = {
+        title: PropTypes.string.isRequired,
+        initialValue: PropTypes.number.isRequired
+      };
+
+      Counter.defaultProps = {
+        title: 'new counter',
+        initialValue: 0,
+      };
+
 
 
 export default Counter;
